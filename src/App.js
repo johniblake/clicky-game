@@ -6,7 +6,7 @@ import Header from "./components/Header";
 export default function App() {
   const [score, setScore] = useState(0);
   const [highest, setHighest] = useState(0);
-  const [message, setMessage] = useState("Click an image to begin!");
+  const [message, setMessage] = useState("Click a tile to begin!");
 
   const onUpdateScore = playerLost => {
     let newHighest = highest + 1;
@@ -15,12 +15,12 @@ export default function App() {
 
     setScore(score + 1);
     setHighest(highest < score + 1 ? newHighest : highest);
-    setMessage("You Guessed Correctly!");
+    setMessage("Well done!");
   };
 
   const resetGame = () => {
     setScore(0);
-    setMessage("You guessed incorrectly!");
+    setMessage("Oops! You already clicked that tile!");
   };
 
   return (
