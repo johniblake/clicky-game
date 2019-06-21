@@ -1,19 +1,25 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
+import "../assets/styles/Tile.css";
 
-export default class Tile extends Component {
-  clicked = () => {
-    this.props.handleClick(this.props.id);
+export default function Tile({ image, reset, handleClick }) {
+  const [clicked, setClicked] = useState(false);
+
+  const wasClicked = () => {
+    clicked ? handleClick(true) : handleClick(false);
+    setClicked(true);
   };
-  render() {
-    let { image } = this.props;
-    return (
-      <div
-        className="tile"
-        onClick={this.clicked}
-        style={{
-          backgroundImage: `url(${image})`
-        }}
-      />
-    );
-  }
+
+  useEffect(() => {
+    if (reset) setClicked(false);
+  }, [reset]);
+
+  return (
+    <div
+      className="tile"
+      onClick={wasClicked}
+      style={{
+        backgroundImage: `url(${image})`
+      }}
+    />
+  );
 }

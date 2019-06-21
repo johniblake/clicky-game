@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
+import "../assets/styles/Header.css";
 
 export default function Header({ score, highest, message }) {
+  var keyframes = [
+    {
+      fontVariationSettings: `"wght" 100`
+    },
+    {
+      fontVariationSettings: `"wght" 900`
+    },
+    {
+      fontVariationSettings: `"wght" 100`
+    }
+  ];
+
+  useEffect(() => {
+    let node = document.querySelector("#message");
+    node.animate(keyframes, 300);
+  });
+
   return (
     <div className="header">
       <div className="header-items">
-        <div className="title">Clicky Game</div>
-        <div className="message">{message}</div>
+        <a href="/" className="title">
+          <div>Clicky Game</div>
+        </a>
+        <div id="message" className="message">
+          {message}
+        </div>
         <div className="score-container">
           Score: {score} | Highest: {highest}
         </div>

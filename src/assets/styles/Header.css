@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "Movement";
+  src: local("MovementV"), url(../fonts/MovementV.ttf);
+}
+
+.header {
+  height: 10vh;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.header-items {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score-container {
+  width: 300px;
+  margin-left: 30px;
+}
+
+.title {
+  width: 300px;
+  margin-right: 30px;
+  font-size: 2rem;
+  font-family: "Movement";
+  text-decoration-line: none;
+  color: white;
+  font-variation-settings: "wght" 900, "SPAC" 100;
+  transition: font-variation-settings 0.3s ease;
+  animation: fontChange 1s;
+}
+
+.message {
+  font-family: "Movement";
+  font-variation-settings: "wght" 100, "SPAC" 120;
+}
+
+.score-container {
+  font-family: "Movement";
+  font-variation-settings: "wght" 900, "SPAC" 100;
+  animation: fontChange 1s;
+}
+
+.title:hover {
+  font-variation-settings: "wght" 100, "SPAC" 120;
+}
+/* 
+@keyframes fontChange {
+  0% {
+    font-variation-settings: "wght" 900, "SPAC" 100;
+  }
+  100% {
+    font-variation-settings: "wght" 100, "SPAC" 120;
+  }
+} */
+
+@keyframes fontChange {
+  0% {
+    font-variation-settings: "wght" 100, "SPAC" 120;
+  }
+  100% {
+    font-variation-settings: "wght" 900, "SPAC" 100;
+  }
+}

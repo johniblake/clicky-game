@@ -1,52 +1,63 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import Tile from "./Tile";
+import "../assets/styles/Game.css";
+let { tiles } = require("../assets/tiles");
 
-export default class Game extends Component {
-  state = this.props.state;
-  tiles = [
-    { id: 1, image: require("../assets/images/dany.jpg") },
-    { id: 2, image: require("../assets/images/oberyn.webp") },
-    { id: 3, image: require("../assets/images/jon.jpg") },
-    { id: 4, image: require("../assets/images/petyr.png") },
-    { id: 5, image: require("../assets/images/tyrion_cup.jpg") },
-    { id: 6, image: require("../assets/images/sansa.png") },
-    { id: 7, image: require("../assets/images/margaery.jpg") },
-    { id: 8, image: require("../assets/images/arya.jpg") },
-    { id: 9, image: require("../assets/images/sandor.png") },
-    { id: 10, image: require("../assets/images/beric.jpg") },
-    { id: 11, image: require("../assets/images/brienne.jpg") },
-    { id: 12, image: require("../assets/images/varys.jpg") }
-  ];
+export default function Game({ updateScore }) {
+  //create state and use it
+  const [reset, setReset] = useState(false);
 
-  render() {
-    this.tiles = this.shuffleArray(this.tiles);
-    return (
-      <div>
-        <main className="container">
-          {this.tiles.map(tile => {
-            return (
-              <Tile
-                id={tile.id}
-                key={tile.id}
-                image={tile.image}
-                handleClick={this.handleClick}
-              />
-            );
-          })}
-        </main>
-      </div>
-    );
-  }
+  // The useEffect hook will run every time 'reset' changes from one render to the next.
+  // It would normally run every render, but because we supply the [reset] dependency array in the second argument to useEffect(),
+  // it will only run when 'reset' changes.
 
-  handleClick = id => {
-    this.props.updateScore(id);
+  useEffect(() => {
+    //if reset has been set to true, animate the message to red, and then set reset to false again
+    if (reset) {
+      document
+        .querySelector("#message")
+        .animate([{ color: "white" }, { color: "red" }], 300);
+    }
+    // setReset(false) will cause this component and its children to rerender only if reset is true
+    setReset(false);
+  }, [reset]);
+
+  // update the score in the Game component whenever a Tile is clicked.
+  // detect whether or not the Tile was previously clicked and reset all the Tiles if it was
+  // also inform the Game component whether or not it should reset the score
+  const handleClick = wasClicked => {
+    if (wasClicked) setReset(true);
+    updateScore(wasClicked);
   };
 
-  shuffleArray = array => {
+  // This shuffle algorithm is the O(n) variation of the Fisher-Yates shuffle introduced by Richard Durstenfeld
+  // https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm
+  const shuffleTiles = array => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
   };
+
+  //shuffle the tiles
+  tiles = shuffleTiles(tiles);
+
+  return (
+    <div>
+      <main className="container">
+        {tiles.map(tile => {
+          return (
+            <Tile
+              id={tile.id}
+              key={tile.id}
+              image={tile.image}
+              handleClick={handleClick}
+              reset={reset}
+            />
+          );
+        })}
+      </main>
+    </div>
+  );
 }

@@ -1,0 +1,21 @@
+.tile {
+  padding: 10px;
+  background-size: 100%;
+  height: 150px;
+  width: 150px;
+  background-color: whitesmoke;
+  margin: 20px;
+}
+
+.tile:hover {
+  box-shadow: 0px 0px 30px 0px #888888;
+  height: 160px;
+  width: 160px;
+  margin: 15px;
+}
+
+.tile:active {
+  height: 148px;
+  width: 148px;
+  margin: 21px;
+}
