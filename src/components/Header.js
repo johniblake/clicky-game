@@ -25,6 +25,7 @@ export default function Header({ score, highest, message }) {
         <a
           href="https://github.com/johniblake/clicky-game"
           target="_blank"
+          rel="noopener noreferrer"
           className="title"
         >
           <div>About</div>

@@ -8,10 +8,11 @@ export default function App() {
   const [highest, setHighest] = useState(0);
   const [message, setMessage] = useState("Click a tile to begin!");
 
-  const onUpdateScore = playerLost => {
+  const onUpdateScore = (playerLost, playerWon) => {
     let newHighest = highest + 1;
 
     if (playerLost) return resetGame();
+    if (playerWon) return youWon();
 
     setScore(score + 1);
     setHighest(highest < score + 1 ? newHighest : highest);
@@ -23,10 +24,15 @@ export default function App() {
     setMessage("Oops! You already clicked that tile!");
   };
 
+  const youWon = () => {
+    setScore(0);
+    setMessage("You Won!");
+  };
+
   return (
     <div className="App">
       <Header score={score} highest={highest} message={message} />
-      <Game updateScore={onUpdateScore} />
+      <Game updateScore={onUpdateScore} score={score} />
     </div>
   );
 }
