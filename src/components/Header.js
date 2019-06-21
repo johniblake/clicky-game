@@ -22,7 +22,11 @@ export default function Header({ score, highest, message }) {
   return (
     <div className="header">
       <div className="header-items">
-        <a href="https://github.com/johniblake/clicky-game" className="title">
+        <a
+          href="https://github.com/johniblake/clicky-game"
+          target="_blank"
+          className="title"
+        >
           <div>About</div>
         </a>
         <div id="message" className="message">
