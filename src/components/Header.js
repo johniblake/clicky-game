@@ -22,8 +22,8 @@ export default function Header({ score, highest, message }) {
   return (
     <div className="header">
       <div className="header-items">
-        <a href="/" className="title">
-          <div>Clicky Game</div>
+        <a href="https://github.com/johniblake/clicky-game" className="title">
+          <div>About</div>
         </a>
         <div id="message" className="message">
           {message}
