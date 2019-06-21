@@ -58,20 +58,18 @@ export default function Game({ updateScore, score }) {
   tiles = shuffleTiles(tiles);
 
   return (
-    <div>
-      <main className="container">
-        {tiles.map(tile => {
-          return (
-            <Tile
-              id={tile.id}
-              key={tile.id}
-              image={tile.image}
-              handleClick={handleClick}
-              reset={reset}
-            />
-          );
-        })}
-      </main>
-    </div>
+    <main className="container">
+      {tiles.map(tile => {
+        return (
+          <Tile
+            id={tile.id}
+            key={tile.id}
+            image={tile.image}
+            handleClick={handleClick}
+            reset={reset}
+          />
+        );
+      })}
+    </main>
   );
 }
