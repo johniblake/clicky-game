@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/clicky-game/static/css/main.6790c477.chunk.css",
-    "main.js": "/clicky-game/static/js/main.ff879072.chunk.js",
-    "main.js.map": "/clicky-game/static/js/main.ff879072.chunk.js.map",
+    "main.js": "/clicky-game/static/js/main.ae6f38d7.chunk.js",
+    "main.js.map": "/clicky-game/static/js/main.ae6f38d7.chunk.js.map",
     "runtime~main.js": "/clicky-game/static/js/runtime~main.27874bd3.js",
     "runtime~main.js.map": "/clicky-game/static/js/runtime~main.27874bd3.js.map",
     "static/js/2.c2695c00.chunk.js": "/clicky-game/static/js/2.c2695c00.chunk.js",
     "static/js/2.c2695c00.chunk.js.map": "/clicky-game/static/js/2.c2695c00.chunk.js.map",
     "index.html": "/clicky-game/index.html",
-    "precache-manifest.eda0b5a975f3e2182ddb0ae7e837593a.js": "/clicky-game/precache-manifest.eda0b5a975f3e2182ddb0ae7e837593a.js",
+    "precache-manifest.2fa1044ecbb91f0a45cffb26adef62ec.js": "/clicky-game/precache-manifest.2fa1044ecbb91f0a45cffb26adef62ec.js",
     "service-worker.js": "/clicky-game/service-worker.js",
     "static/css/main.6790c477.chunk.css.map": "/clicky-game/static/css/main.6790c477.chunk.css.map",
     "static/media/Header.css": "/clicky-game/static/media/MovementV.e267d5a9.ttf",
@@ -20,7 +20,7 @@
     "static/media/margaery.jpg": "/clicky-game/static/media/margaery.56a51209.jpg",
     "static/media/oberyn.webp": "/clicky-game/static/media/oberyn.ed5a39b1.webp",
     "static/media/petyr.png": "/clicky-game/static/media/petyr.94fcba00.png",
-    "static/media/sandor.png": "/clicky-game/static/media/sandor.d5b8c647.png",
+    "static/media/sandor.png": "/clicky-game/static/media/sandor.56daae17.png",
     "static/media/sansa.png": "/clicky-game/static/media/sansa.e91b8d42.png",
     "static/media/tyrion_cup.jpg": "/clicky-game/static/media/tyrion_cup.63789674.jpg",
     "static/media/varys.jpg": "/clicky-game/static/media/varys.9b91f966.jpg"

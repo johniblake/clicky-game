@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "95fdd00a650945b8782631504084c269",
+    "revision": "d6e8733eef4aba5bb179f9493d402c42",
     "url": "/clicky-game/index.html"
   },
   {
-    "revision": "87064957c3c2d0489bdf",
+    "revision": "5006982b40d253b9545e",
     "url": "/clicky-game/static/css/main.6790c477.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/clicky-game/static/js/2.c2695c00.chunk.js"
   },
   {
-    "revision": "87064957c3c2d0489bdf",
-    "url": "/clicky-game/static/js/main.ff879072.chunk.js"
+    "revision": "5006982b40d253b9545e",
+    "url": "/clicky-game/static/js/main.ae6f38d7.chunk.js"
   },
   {
     "revision": "265538ab0e4606d350e6",
@@ -56,8 +56,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/clicky-game/static/media/petyr.94fcba00.png"
   },
   {
-    "revision": "d5b8c647894388cf73be5657a016d89c",
-    "url": "/clicky-game/static/media/sandor.d5b8c647.png"
+    "revision": "56daae176190d5c903e1e0e85beb63d8",
+    "url": "/clicky-game/static/media/sandor.56daae17.png"
   },
   {
     "revision": "e91b8d42acbfc8d6b320b74661a4f057",
